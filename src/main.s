@@ -4,3 +4,4 @@
 
     .global main
     main:
+        jmp exit_success
