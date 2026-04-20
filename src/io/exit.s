@@ -1,17 +1,19 @@
 .intel_syntax noprefix
 
+.include "sys.inc"
+
 .section .text
 
     .macro EXIT code
-        mov eax, 60
+        mov eax, SYS_CALL.EXIT
         mov edi, \code
         syscall
     .endm
 
     .global exit_success
     exit_success:
-        EXIT 0
+        EXIT SYS_EXIT.SUCCESS
 
     .global exit_failure
     exit_failure:
-        EXIT 1
+        EXIT SYS_EXIT.FAILURE

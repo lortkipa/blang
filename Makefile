@@ -19,7 +19,7 @@ $(BIN_FOLDER)/$(NAME): $(OBJ_FILES)
 # generate .o file for each .s
 $(BIN_FOLDER)/%.o: $(SRC_FOLDER)/%.s | $(BIN_FOLDER)
 	@mkdir -p $(dir $@)
-	@as -o $@ $<
+	@as -I$(SRC_FOLDER) -o $@ $<
 	@echo 'Compiled: $@'
 
 # create binaries folder
