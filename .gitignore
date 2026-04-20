@@ -1,0 +1,15 @@
+# binaries folder
+bin/
+
+# binary files
+*.bin
+*.img
+*.iso
+*.disk
+*.o
+*.obj
+*.so
+*.elf
+*.lib
+*.efi
+*.exe
