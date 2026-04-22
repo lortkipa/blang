@@ -15,4 +15,7 @@
         lea rdi, [rip + file_name]
         call file_create
 
+        mov edi, eax
+        call file_write
+
         jmp exit_success
