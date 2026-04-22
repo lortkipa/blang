@@ -6,7 +6,7 @@
           .ascii "ret 0\n"
           .ascii "}\n\0"
 
-    file_name: .string "test_file"
+    file_name: .string "bin/test"
 
 .section .text
 

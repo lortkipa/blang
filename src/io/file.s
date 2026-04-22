@@ -10,6 +10,7 @@
 
 # 'system open' modes
 .set OPEN_MODE.OWNER_EXEC, 0100
+.set OPEN_MODE.OWNER_WRITE, 0200
 
 .section .text
 
@@ -19,7 +20,7 @@
     file_create:
         mov eax, SYS_CALL.OPEN
         mov esi, OPEN_FLAG.WRITE | OPEN_FLAG.CREATE
-        mov edx, OPEN_MODE.OWNER_EXEC
+        mov edx, OPEN_MODE.OWNER_WRITE | OPEN_MODE.OWNER_EXEC
         syscall
 
         cmp eax, 0
